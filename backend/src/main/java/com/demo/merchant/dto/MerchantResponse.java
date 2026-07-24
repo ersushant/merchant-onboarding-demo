@@ -1,18 +1,20 @@
 package com.demo.merchant.dto;
 
+import com.demo.merchant.entity.MerchantStatus;
+
 public class MerchantResponse {
 
     private Long id;
     private String merchantName;
     private String email;
     private String phone;
-    private String status;
+    private MerchantStatus status;
 
     public MerchantResponse() {
     }
 
     public MerchantResponse(Long id, String merchantName, String email,
-                            String phone, String status) {
+                            String phone, MerchantStatus status) {
         this.id = id;
         this.merchantName = merchantName;
         this.email = email;
@@ -52,11 +54,11 @@ public class MerchantResponse {
         this.phone = phone;
     }
 
-    public String getStatus() {
+    public MerchantStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(MerchantStatus status) {
         this.status = status;
     }
 }

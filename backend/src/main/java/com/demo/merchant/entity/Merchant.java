@@ -16,12 +16,17 @@ public class Merchant {
 
     private String phone;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private MerchantStatus status;
 
     public Merchant() {
     }
 
-    public Merchant(Long id, String merchantName, String email, String phone, String status) {
+    public Merchant(Long id,
+                    String merchantName,
+                    String email,
+                    String phone,
+                    MerchantStatus status) {
         this.id = id;
         this.merchantName = merchantName;
         this.email = email;
@@ -61,11 +66,11 @@ public class Merchant {
         this.phone = phone;
     }
 
-    public String getStatus() {
+    public MerchantStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(MerchantStatus status) {
         this.status = status;
     }
 }
